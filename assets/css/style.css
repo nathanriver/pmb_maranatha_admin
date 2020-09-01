@@ -1,0 +1,238 @@
+.navbar-logo {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-logo img {
+    width: 60%;
+}
+
+.col.col-12.bg-red {
+    background: #e74a3b;
+}
+
+.details {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.card-strata {
+    width: 100%;
+}
+
+.card-strata a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+.admission-id {
+    font-size: 15px;
+    /* color: #0067ac; */
+}
+
+.admission-detail {
+    font-size: 13px;
+}
+
+.btn-admission-action {
+    font-size: 15px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.btn-action-1 {
+    /* background-color: #0067ac; */
+    background: transparent;
+    color: #0067ac;
+    /* color: #fff; */
+    border-color: #0067ac;
+}
+
+.btn-action-1:hover {
+    background-color: #0067ac;
+    color: #fff;
+    border-color: #0067ac;
+}
+
+.btn-action-2 {
+    color: #e74a3b;
+    border-color: #e74a3b;
+}
+
+.btn-action-2:hover {
+    background-color: #e74a3b;
+    color: #fff;
+    border-color: #e74a3b;
+}
+
+.badge-status {
+    /* background-color: #0067ac; */
+    border-radius: 4px;
+    color: #0067ac;
+    /* font-size: 13px; */
+    padding: 2px;
+}
+
+.navbar-bg {
+    background-color: #0067ac;
+}
+
+.btn-add-admission {
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #0067ac;
+    border-color: #0067ac;
+    width: 100%;
+    color: #fff;
+}
+
+.btn-add-admission:hover {
+    color: #fff;
+    background-color: #003d7c;
+    border-color: #003d7c;
+}
+
+.card-border-left {
+    border-left: .25rem solid #0067ac;
+}
+
+label {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.label-adm {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.text-radio label {
+    font-size: 15px;
+}
+
+.tab-content {
+    width: 100%;
+}
+
+.form-check label {
+    font-size: 15px;
+}
+
+.btn-bg-blue {
+    color: #fff;
+    background-color: #0067ac;
+    border-color: #0067ac;
+}
+
+.btn-bg-blue:hover {
+    color: #fff;
+    background-color: #003d7c;
+    border-color: #003d7c;
+}
+
+.bg-strata-1 {
+    background-color: #2ab4c0;
+}
+
+.bg-strata-2 {
+    background-color: #f2784b;
+}
+
+.bg-jalur-1 {
+    background-color: #1BBC9B;
+}
+
+.bg-jalur-2 {
+    background-color: #3faba4;
+}
+
+.bg-cyan {
+    background-color: #36b9cc;
+}
+
+.btn-blue {
+    background: #fff;
+    color: #0067ac;
+    border-color: #0067ac;
+}
+
+/* PROFILE NAV TABS */
+
+.nav-tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+.nav-tabs .nav-link {
+    color: #858796;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-item {
+    position: relative;
+}
+
+.nav-tabs .nav-link.active {
+    color: #858796;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #0067ac;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-blue {
+    color: #0067ac;
+}
+
+.fa-times {
+    color: red;
+}
+
+.btn-bg-blue .fa-plus {
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+/* PRODI */
+
+#btn-pilihan-2:not([href]) {
+    color: #fff;
+}
+
+/* DASHBOARD ADMIN */
+
+.table-height-over{
+    max-height: 400px;
+}
+
+.fa-check{
+    color: #26C281;
+}
+
+.table-fix-head thead th{
+    position: sticky;
+    top: 0;
+    background: #f8f9fc;
+}
+
+.font-small{
+    font-size: 12px;
+}
+
+.font-small th{
+    padding: 5px 5px;
+}
+
+@media (max-width: 444px) {
+    .nav-tabs {
+        display: -webkit-box;
+    }
+}

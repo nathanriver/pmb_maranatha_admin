@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - MCU</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion p-0 navbar-bg">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="" href="dashboard.html">
+                    <div class="navbar-logo">
+                        <img src="assets/img/logo_maranatha_white.png">
+                    </div>
+                </a>
+                <div class="col-12">
+                    <hr class="sidebar-divider my-0">
+                </div>
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <div class="col-12">
+                        <hr class="sidebar-divider">
+                    </div>
+                    <li class="nav-item dropdown" role="presentation">
+                        <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseAkademis">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Akademis</span>
+                        </a>
+                        <div id="collapseAkademis" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage Akademis</h6>
+                                <a class="collapse-item active" href="">Dashboard</a>
+                                <a class="collapse-item" href="">Quota Penerimaan</a>
+                                <a class="collapse-item" href="">Data Periode / Jalur</a>
+                                <a class="collapse-item" href="">Biaya Masuk</a>
+                                <a class="collapse-item" href="">Biaya Kuliah</a>
+                                <a class="collapse-item" href="">Biaya Registrasi</a>
+                                <a class="collapse-item" href="">Biaya Test</a>
+                                <a class="collapse-item" href="">Simulasi</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" role="presentation">
+                        <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapsePendaftar">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Pendaftar</span>
+                        </a>
+                        <div id="collapsePendaftar" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage Pendaftar</h6>
+                                <a class="collapse-item" href="">Data Pendaftar</a>
+                                <a class="collapse-item" href="">Daftar Baru</a>
+                                <a class="collapse-item" href="">Peserta Ujian</a>
+                                <a class="collapse-item" href="">Data Upload Pendaftar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsmCbt">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>USM & CBT</span>
+                        </a>
+                        <div id="collapseUsmCbt" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage USM & CBT</h6>
+                                <a class="collapse-item" href="">Peserta</a>
+                                <a class="collapse-item" href="">Data Nilai</a>
+                                <a class="collapse-item" href="">Input Nilai</a>
+                                <a class="collapse-item" href="">Hasil</a>
+                                <a class="collapse-item" href="">Hasil CBT</a>
+                                <a class="collapse-item" href="">Soal</a>
+                                <a class="collapse-item" href="">Kunci Jawaban</a>
+                                <a class="collapse-item" href="">Sesi Ujian</a>
+                                <a class="collapse-item" href="">CBT: Jenis Ujian</a>
+                                <a class="collapse-item" href="">CBT: Blok Ujian</a>
+                                <a class="collapse-item" href="">CBT: Bank Soal</a>
+                                <a class="collapse-item" href="">CBT: Impor Data</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseYudisium">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Yudisium</span>
+                        </a>
+                        <div id="collapseYudisium" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage Yudisium</h6>
+                                <a class="collapse-item" href="">Sesi Yudisium</a>
+                                <a class="collapse-item" href="">Peserta</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                            data-target="#collapseKonfigurasi">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Konfigurasi</span>
+                        </a>
+                        <div id="collapseKonfigurasi" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Configuration</h6>
+                                <a class="collapse-item" href="">Kode Akses CBT</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDataMaster">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Data Master</span>
+                        </a>
+                        <div id="collapseDataMaster" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage Data Master</h6>
+                                <a class="collapse-item" href="">Data Sekolah</a>
+                                <a class="collapse-item" href="">Sifat Tiket</a>
+                                <a class="collapse-item" href="">Biaya Masuk</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="col-12">
+                    <hr class="sidebar-divider">
+                </div>
+                <div class="text-center d-none d-md-inline">
+                    <button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>
+                </div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown no-arrow" role="presentation">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
+                                        <span class="d-none d-lg-inline mr-2 text-gray-600 small">
+                                            Rintarou Okabe</span>
+                                        <img class="border rounded-circle img-profile" src="assets/img/avatar2.jpg">
+                                    </a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu">
+                                        <a class="dropdown-item" role="presentation" href="profile.html">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile
+                                        </a>
+                                        <a class="dropdown-item" role="presentation" href="ubah-password.html">
+                                            <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Ubah Password
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" role="presentation" href="index.html">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            &nbsp;Logout
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">Dashboard</h3>
+                    </div>
+                    <!-- CONTENT -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardPesertaUjian" class="d-block card-header py-3"
+                                    data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseCardPesertaUjian">
+                                    <h6 class="m-0 font-weight-bold text-blue">Peserta Ujian</h6>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardPesertaUjian">
+                                    <div class="card-body">
+                                        <div class="table-responsive table-height-over">
+                                            <div class="col-xs-12 col-md-6 col-lg-3">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="filterWaktu">
+                                                        <option>2020-09-01 [08:30:00 - 10:30:00] - online dari rumah
+                                                        </option>
+                                                        <option>2020-09-01 [08:30:00 - 10:30:00] - online dari rumah
+                                                        </option>
+                                                        <option>2020-09-01 [08:30:00 - 10:30:00] - online dari rumah
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <table class="table table-bordered text-black table-fix-head">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-nowrap">No. Peserta</th>
+                                                        <th class="text-nowrap">Nama</th>
+                                                        <th class="text-nowrap">Waktu</th>
+                                                        <th class="text-nowrap">Bayar</th>
+                                                        <th class="text-nowrap">Beres</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            2020xxxx
+                                                        </td>
+                                                        <td>
+                                                            Nate River
+                                                        </td>
+                                                        <td>
+                                                            08:30:00 - 10:30:00
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2020xxxx</td>
+                                                        <td>Nate River</td>
+                                                        <td>08:30:00 - 10:30:00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="#collapseCardRekapitulasiAngka" class="d-block card-header py-3"
+                                    data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseCardRekapitulasiAngka">
+                                    <h6 class="m-0 font-weight-bold text-blue">Rekapitulasi Angka Tahun Akademik
+                                        2020/2021</h6>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardRekapitulasiAngka">
+                                    <div class="card-body">
+                                        <div class="table-responsive table-height-over">
+                                            <div class="col-xs-12 col-md-6 col-lg-3">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="filterWaktu">
+                                                        <option value="">Total</option>
+                                                        <option value="">U / C</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <table class="table table-bordered text-black table-fix-head font-small">
+                                                <thead>
+                                                    <tr class="text-center">
+                                                        <th>Prodi</th>
+                                                        <th>Level</th>
+                                                        <th>Total</th>
+                                                        <th>JTEST</th>
+                                                        <th>JRAP</th>
+                                                        <th>JMTS</th>
+                                                        <th>JMTG</th>
+                                                        <th>MREG</th>
+                                                        <th>BEA20</th>
+                                                        <th>JMTSJ</th>
+                                                        <th>MKERFE</th>
+                                                        <th>OSC19</th>
+                                                        <th>INSNEG</th>
+                                                        <th>BEANON</th>
+                                                        <th>FamPri</th>
+                                                        <th>MUTIN1</th>
+                                                        <th>MUTEKS</th>
+                                                        <th>CamMin</th>
+                                                        <th>PEDULI</th>
+                                                        <th>BEASEN</th>
+                                                        <th>BEAILM</th>
+                                                        <th>UDKHUS</th>
+                                                        <th>UTBK20</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center">KDU [10]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">1820</td>
+                                                        <td class="width60 text-center">637</td>
+                                                        <td class="width60 text-center">609</td>
+                                                        <td class="width60 text-center">48</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">341</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">171</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">PKDU [15]</td>
+                                                        <td class="width60 text-center">PROFESI</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">JTS [21]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">329</td>
+                                                        <td class="width60 text-center">58</td>
+                                                        <td class="width60 text-center">85</td>
+                                                        <td class="width60 text-center">9</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">114</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">6</td>
+                                                        <td class="width60 text-center">6</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">7</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">25</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">JTE [22]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">102</td>
+                                                        <td class="width60 text-center">16</td>
+                                                        <td class="width60 text-center">25</td>
+                                                        <td class="width60 text-center">8</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">37</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">7</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">JTI [23]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">287</td>
+                                                        <td class="width60 text-center">49</td>
+                                                        <td class="width60 text-center">75</td>
+                                                        <td class="width60 text-center">17</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">105</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">19</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">JTK [27]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">90</td>
+                                                        <td class="width60 text-center">19</td>
+                                                        <td class="width60 text-center">27</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">25</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">PSI [30]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">913</td>
+                                                        <td class="width60 text-center">231</td>
+                                                        <td class="width60 text-center">282</td>
+                                                        <td class="width60 text-center">47</td>
+                                                        <td class="width60 text-center">11</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">230</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">15</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">7</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">9</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">8</td>
+                                                        <td class="width60 text-center">62</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">MPSI [32]</td>
+                                                        <td class="width60 text-center">S2</td>
+                                                        <td class="width60 text-center">33</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">33</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">MPSN [34]</td>
+                                                        <td class="width60 text-center">S2</td>
+                                                        <td class="width60 text-center">11</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">11</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">SIG [41]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">246</td>
+                                                        <td class="width60 text-center">54</td>
+                                                        <td class="width60 text-center">75</td>
+                                                        <td class="width60 text-center">9</td>
+                                                        <td class="width60 text-center">6</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">72</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">SJP [42]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">93</td>
+                                                        <td class="width60 text-center">29</td>
+                                                        <td class="width60 text-center">23</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">28</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">3BM [44]</td>
+                                                        <td class="width60 text-center">D3</td>
+                                                        <td class="width60 text-center">65</td>
+                                                        <td class="width60 text-center">13</td>
+                                                        <td class="width60 text-center">11</td>
+                                                        <td class="width60 text-center">8</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">23</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">SCH [46]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">78</td>
+                                                        <td class="width60 text-center">10</td>
+                                                        <td class="width60 text-center">29</td>
+                                                        <td class="width60 text-center">8</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">21</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">EKA [51]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">507</td>
+                                                        <td class="width60 text-center">91</td>
+                                                        <td class="width60 text-center">137</td>
+                                                        <td class="width60 text-center">34</td>
+                                                        <td class="width60 text-center">8</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">166</td>
+                                                        <td class="width60 text-center">7</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">12</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">6</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">31</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">EKM [52]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">1049</td>
+                                                        <td class="width60 text-center">263</td>
+                                                        <td class="width60 text-center">304</td>
+                                                        <td class="width60 text-center">79</td>
+                                                        <td class="width60 text-center">22</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">248</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">16</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">6</td>
+                                                        <td class="width60 text-center">13</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">8</td>
+                                                        <td class="width60 text-center">10</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">62</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">MEKM [53]</td>
+                                                        <td class="width60 text-center">S2</td>
+                                                        <td class="width60 text-center">53</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">53</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">MEKA [57]</td>
+                                                        <td class="width60 text-center">S2</td>
+                                                        <td class="width60 text-center">25</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">17</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">8</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">3SR [61]</td>
+                                                        <td class="width60 text-center">D3</td>
+                                                        <td class="width60 text-center">108</td>
+                                                        <td class="width60 text-center">28</td>
+                                                        <td class="width60 text-center">22</td>
+                                                        <td class="width60 text-center">12</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">36</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">SRM [62]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">22</td>
+                                                        <td class="width60 text-center">9</td>
+                                                        <td class="width60 text-center">6</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">DIN [63]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">249</td>
+                                                        <td class="width60 text-center">47</td>
+                                                        <td class="width60 text-center">70</td>
+                                                        <td class="width60 text-center">28</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">72</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">DKV [64]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">225</td>
+                                                        <td class="width60 text-center">41</td>
+                                                        <td class="width60 text-center">60</td>
+                                                        <td class="width60 text-center">31</td>
+                                                        <td class="width60 text-center">8</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">58</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">5</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">11</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">ARS [65]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">116</td>
+                                                        <td class="width60 text-center">17</td>
+                                                        <td class="width60 text-center">39</td>
+                                                        <td class="width60 text-center">10</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">38</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">6</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">TIF [72]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">340</td>
+                                                        <td class="width60 text-center">50</td>
+                                                        <td class="width60 text-center">100</td>
+                                                        <td class="width60 text-center">13</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">119</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">7</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">26</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">SIF [73]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">240</td>
+                                                        <td class="width60 text-center">39</td>
+                                                        <td class="width60 text-center">70</td>
+                                                        <td class="width60 text-center">20</td>
+                                                        <td class="width60 text-center">7</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">64</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">9</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">4</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">17</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">MIK [79]</td>
+                                                        <td class="width60 text-center">S2</td>
+                                                        <td class="width60 text-center">11</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">11</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">HKM [87]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">627</td>
+                                                        <td class="width60 text-center">151</td>
+                                                        <td class="width60 text-center">192</td>
+                                                        <td class="width60 text-center">24</td>
+                                                        <td class="width60 text-center">9</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">147</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">15</td>
+                                                        <td class="width60 text-center">10</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">3</td>
+                                                        <td class="width60 text-center">11</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">50</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">KDG [90]</td>
+                                                        <td class="width60 text-center">S1</td>
+                                                        <td class="width60 text-center">682</td>
+                                                        <td class="width60 text-center">199</td>
+                                                        <td class="width60 text-center">288</td>
+                                                        <td class="width60 text-center">19</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">99</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">1</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">2</td>
+                                                        <td class="width60 text-center">72</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">PDG [95]</td>
+                                                        <td class="width60 text-center">PROFESI</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                        <td class="width60 text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="text-right">Total</td>
+                                                        <td class="text-center"><b>8321</b></td>
+                                                        <td class="text-center"><b>2051</b></td>
+                                                        <td class="text-center"><b>2529</b></td>
+                                                        <td class="text-center"><b>433</b></td>
+                                                        <td class="text-center"><b>98</b></td>
+                                                        <td class="text-center"><b>125</b></td>
+                                                        <td class="text-center"><b>2047</b></td>
+                                                        <td class="text-center"><b>29</b></td>
+                                                        <td class="text-center"><b>8</b></td>
+                                                        <td class="text-center"><b>77</b></td>
+                                                        <td class="text-center"><b>57</b></td>
+                                                        <td class="text-center"><b>23</b></td>
+                                                        <td class="text-center"><b>58</b></td>
+                                                        <td class="text-center"><b>16</b></td>
+                                                        <td class="text-center"><b>1</b></td>
+                                                        <td class="text-center"><b>47</b></td>
+                                                        <td class="text-center"><b>48</b></td>
+                                                        <td class="text-center"><b>25</b></td>
+                                                        <td class="text-center"><b>32</b></td>
+                                                        <td class="text-center"><b>25</b></td>
+                                                        <td class="text-center"><b>592</b></td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © MCU 2020</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/js/chart.min.js"></script> -->
+    <!-- <script src="assets/js/bs-init.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+</body>
+
+</html>
