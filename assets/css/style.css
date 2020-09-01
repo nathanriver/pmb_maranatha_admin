@@ -228,12 +228,13 @@ label {
 }
 
 .font-small th {
+    font-size: 13px;
     padding: 5px 5px;
 }
 
 /* TAHUN AKADEMIS */
 
-.btn-aksi .fa-calendar-alt, .btn-aksi .fa-list, .btn-aksi .fa-pencil-alt, .btn-aksi .fa-trash-alt {
+.btn-aksi .fa {
     color: #fff;
     /* font-size: 14px; */
 }

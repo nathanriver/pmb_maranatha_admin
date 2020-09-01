@@ -34,8 +34,7 @@
                         <hr class="sidebar-divider">
                     </div>
                     <li class="nav-item dropdown" role="presentation">
-                        <a class="nav-link collapsed active" href="" data-toggle="collapse"
-                            data-target="#collapseAkademis">
+                        <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseAkademis">
                             <i class="fas fa-fw fa-graduation-cap"></i>
                             <span>Akademis</span>
                         </a>
@@ -45,7 +44,7 @@
                                 <a class="collapse-item" href="">Dashboard</a>
                                 <a class="collapse-item" href="tahun-akademis.html">Tahun Akademis</a>
                                 <a class="collapse-item" href="">Quota Penerimaan</a>
-                                <a class="collapse-item active" href="periode-pendaftaran.html">Data Periode / Jalur</a>
+                                <a class="collapse-item" href="periode-pendaftaran.html">Data Periode / Jalur</a>
                                 <a class="collapse-item" href="">Biaya Masuk</a>
                                 <a class="collapse-item" href="">Biaya Kuliah</a>
                                 <a class="collapse-item" href="">Biaya Registrasi</a>
@@ -55,14 +54,15 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown" role="presentation">
-                        <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapsePendaftar">
+                        <a class="nav-link collapsed active" href="" data-toggle="collapse"
+                            data-target="#collapsePendaftar">
                             <i class="fas fa-fw fa-user"></i>
                             <span>Pendaftar</span>
                         </a>
                         <div id="collapsePendaftar" class="collapse" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Manage Pendaftar</h6>
-                                <a class="collapse-item" href="pendaftar.html">Data Pendaftar</a>
+                                <a class="collapse-item active" href="pendaftar.html">Data Pendaftar</a>
                                 <a class="collapse-item" href="">Daftar Baru</a>
                                 <a class="collapse-item" href="">Peserta Ujian</a>
                                 <a class="collapse-item" href="">Data Upload Pendaftar</a>
@@ -176,7 +176,7 @@
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Periode Pendaftaran</h3>
+                        <h3 class="text-dark mb-0">Data Pendaftar</h3>
                     </div>
                     <!-- CONTENT -->
                     <div class="row">
@@ -184,18 +184,25 @@
 
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Periode</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Pendaftar</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
 
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-2 mb-3">
                                             <a class="btn btn-add-admission" href="#">
-                                                <i class="fas fa-plus-circle fa-sm text-white-50"></i>&nbsp;Tambah
+                                                <i class="fas fa-plus-circle fa-sm text-white-50"></i>&nbsp;Registrasi Baru
                                             </a>
                                         </div>
 
                                         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+                                            <div class="form-group">
+                                                <select class="form-control" id="filterWaktu">
+                                                    <option value="">Semua</option>
+                                                    <option value="">Tanpa Tiket</option>
+                                                    <option value="">Pakai Tiket</option>
+                                                </select>
+                                            </div>
                                             <div class="form-group">
                                                 <select class="form-control" id="filterWaktu">
                                                     <option value="4">Tahun Akademik 2014/2015 (2014) - 8</option>
@@ -218,205 +225,184 @@
                                             </div>
                                         </div>
                                         <!-- id="dataTable" -->
-                                        <table id="dataTable" class="table table-bordered text-black cellspacing=" 0">
+                                        <table id="dataTable" class="table table-bordered text-black font-small text-center">
                                             <thead>
                                                 <tr>
                                                     <th></th>
-                                                    <th>Kode</th>
-                                                    <th>Nama</th>
-                                                    <th>Jalur</th>
-                                                    <th>Tipe</th>
-                                                    <th>Gelombang</th>
-                                                    <th>Tahun Akademis</th>
-                                                    <th></th>
+                                                    <th>
+                                                        No Peserta
+                                                        <div class="form-group m-0">
+                                                            <input class="form-control font-small" type="text">
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        Email
+                                                        <div class="form-group m-0">
+                                                            <input class="form-control font-small" type="text">
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        Nama
+                                                        <div class="form-group m-0">
+                                                            <input class="form-control font-small" type="text">
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        Periode
+                                                        <div class="form-group m-0">
+                                                            <select class="form-control font-small" id="filterWaktu">
+                                                                <option value="">Jalur Beasiswa</option>
+                                                                <option value="">Jalur Mitra Sekolah</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th class="align-middle">Ujian (Ttl/Byr/Sdh)</th>
+                                                    <th>
+                                                        Status
+                                                        <div class="form-group m-0">
+                                                            <select class="form-control font-small" id="filterWaktu">
+                                                                <option value="">CANCELLED</option>
+                                                                <option value="">FINISHED</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        Status Tambahan
+                                                        <div class="form-group m-0">
+                                                            <select class="form-control font-small" id="filterWaktu">
+                                                                <option value="4">Tahun Akademik 2014/2015 (2014) - 8
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        Status Penerimaan
+                                                        <div class="form-group m-0">
+                                                            <select class="form-control font-small" id="filterWaktu">
+                                                                <option value="">GAGAL</option>
+                                                                <option value="">DITUNDA</option>
+                                                                <option value="">BERHASIL</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>199</td>
-                                                    <td>01JTEST</td>
-                                                    <td>Jalur Reguler Test</td>
-                                                    <td>Reguler</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
                                                         <div class="text-center text-nowrap">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
                                                             </a>
                                                         </div>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>199</td>
-                                                    <td>01JTEST</td>
-                                                    <td>Jalur Reguler Test</td>
-                                                    <td>Reguler</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
-                                                            </a>
-                                                        </div>
+                                                        2020xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        nate.river@email.com
+                                                    </td>
+                                                    <td>
+                                                        Nate River
+                                                    </td>
+                                                    <td>
+                                                        Jalur Beasiswa
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        CANCELLED
+                                                    </td>
+                                                    <td>
+                                                        NREG_PAID
+                                                    </td>
+                                                    <td>
+                                                        GAGAL
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>211</td>
-                                                    <td>01FamPri</td>
-                                                    <td>Family Priority</td>
-                                                    <td>Reguler</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
                                                             </a>
                                                         </div>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>212</td>
-                                                    <td>01MUTIN1</td>
-                                                    <td>Mutasi Internal</td>
-                                                    <td>Mutasi Internal</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
-                                                            </a>
-                                                        </div>
+                                                        2020xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        nate.river@email.com
+                                                    </td>
+                                                    <td>
+                                                        Nate River
+                                                    </td>
+                                                    <td>
+                                                        Jalur Beasiswa
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        CANCELLED
+                                                    </td>
+                                                    <td>
+                                                        NREG_PAID
+                                                    </td>
+                                                    <td>
+                                                        GAGAL
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>213</td>
-                                                    <td>01MUTEKS</td>
-                                                    <td>Mutasi Eksternal</td>
-                                                    <td>Mutasi External</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
                                                             </a>
                                                         </div>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>214</td>
-                                                    <td>01CamMin</td>
-                                                    <td>Campus Ministry</td>
-                                                    <td>Reguler</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
-                                                            </a>
-                                                        </div>
+                                                        2020xxxxxx
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>215</td>
-                                                    <td>01PEDULI</td>
-                                                    <td>Beasiswa Maranatha Peduli</td>
-                                                    <td>Maranatha Peduli</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
-                                                            </a>
-                                                        </div>
+                                                        nate.river@email.com
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>216</td>
-                                                    <td>01BEASEN</td>
-                                                    <td>Jalur Beasiswa Seni</td>
-                                                    <td>Reguler Rapor</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
-                                                            </a>
-                                                        </div>
+                                                        Nate River
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>217</td>
-                                                    <td>01BEAILM</td>
-                                                    <td>Beasiswa Interview 5 menit</td>
-                                                    <td>Reguler Khusus</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
-                                                            </a>
-                                                        </div>
+                                                        Jalur Beasiswa
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>218</td>
-                                                    <td>01UDKHUS</td>
-                                                    <td>Jalur Undangan Khusus</td>
-                                                    <td>Undangan</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
-                                                            </a>
-                                                        </div>
+                                                        0/0/0 <i class="fa fa-check"></i>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>210</td>
-                                                    <td>01BEANON</td>
-                                                    <td>Jalur Beasiswa Olahraga</td>
-                                                    <td>Reguler Rapor</td>
-                                                    <td>Online</td>
-                                                    <td>1</td>
-                                                    <td>Tahun Akademik 2020/2021</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a class="btn btn-bg-blue btn-sm" href="">
-                                                                <i class="fa fa-cog"></i>
-                                                                Pengaturan
-                                                            </a>
-                                                        </div>
+                                                        CANCELLED
+                                                    </td>
+                                                    <td>
+                                                        NREG_PAID
+                                                    </td>
+                                                    <td>
+                                                        GAGAL
                                                     </td>
                                                 </tr>
                                             </tbody>
