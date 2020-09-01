@@ -209,26 +209,45 @@ label {
 
 /* DASHBOARD ADMIN */
 
-.table-height-over{
+.table-height-over {
     max-height: 400px;
 }
 
-.fa-check{
+.fa-check {
     color: #26C281;
 }
 
-.table-fix-head thead th{
+.table-fix-head thead th {
     position: sticky;
     top: 0;
     background: #f8f9fc;
 }
 
-.font-small{
+.font-small {
     font-size: 12px;
 }
 
-.font-small th{
+.font-small th {
     padding: 5px 5px;
+}
+
+/* TAHUN AKADEMIS */
+
+.btn-aksi .fa-calendar-alt, .btn-aksi .fa-list, .btn-aksi .fa-pencil-alt, .btn-aksi .fa-trash-alt {
+    color: #fff;
+    /* font-size: 14px; */
+}
+
+.btn-aksi {
+    background-color: #00a3e3;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.btn-aksi-danger {
+    background-color: #dc3545;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 @media (max-width: 444px) {

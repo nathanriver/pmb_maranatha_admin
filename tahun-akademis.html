@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - MCU</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/datatables/dataTables.bootstrap4.min.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion p-0 navbar-bg">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="" href="dashboard.html">
+                    <div class="navbar-logo">
+                        <img src="assets/img/logo_maranatha_white.png">
+                    </div>
+                </a>
+                <div class="col-12">
+                    <hr class="sidebar-divider my-0">
+                </div>
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <div class="col-12">
+                        <hr class="sidebar-divider">
+                    </div>
+                    <li class="nav-item dropdown" role="presentation">
+                        <a class="nav-link collapsed active" href="" data-toggle="collapse"
+                            data-target="#collapseAkademis">
+                            <i class="fas fa-fw fa-graduation-cap"></i>
+                            <span>Akademis</span>
+                        </a>
+                        <div id="collapseAkademis" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage Akademis</h6>
+                                <a class="collapse-item" href="">Dashboard</a>
+                                <a class="collapse-item active" href="tahun-akademis.html">Tahun Akademis</a>
+                                <a class="collapse-item" href="">Quota Penerimaan</a>
+                                <a class="collapse-item" href="">Data Periode / Jalur</a>
+                                <a class="collapse-item" href="">Biaya Masuk</a>
+                                <a class="collapse-item" href="">Biaya Kuliah</a>
+                                <a class="collapse-item" href="">Biaya Registrasi</a>
+                                <a class="collapse-item" href="">Biaya Test</a>
+                                <a class="collapse-item" href="">Simulasi</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" role="presentation">
+                        <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapsePendaftar">
+                            <i class="fas fa-fw fa-user"></i>
+                            <span>Pendaftar</span>
+                        </a>
+                        <div id="collapsePendaftar" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage Pendaftar</h6>
+                                <a class="collapse-item" href="">Data Pendaftar</a>
+                                <a class="collapse-item" href="">Daftar Baru</a>
+                                <a class="collapse-item" href="">Peserta Ujian</a>
+                                <a class="collapse-item" href="">Data Upload Pendaftar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsmCbt">
+                            <i class="fas fa-fw fa-desktop"></i>
+                            <span>USM & CBT</span>
+                        </a>
+                        <div id="collapseUsmCbt" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage USM & CBT</h6>
+                                <a class="collapse-item" href="">Peserta</a>
+                                <a class="collapse-item" href="">Data Nilai</a>
+                                <a class="collapse-item" href="">Input Nilai</a>
+                                <a class="collapse-item" href="">Hasil</a>
+                                <a class="collapse-item" href="">Hasil CBT</a>
+                                <a class="collapse-item" href="">Soal</a>
+                                <a class="collapse-item" href="">Kunci Jawaban</a>
+                                <a class="collapse-item" href="">Sesi Ujian</a>
+                                <a class="collapse-item" href="">CBT: Jenis Ujian</a>
+                                <a class="collapse-item" href="">CBT: Blok Ujian</a>
+                                <a class="collapse-item" href="">CBT: Bank Soal</a>
+                                <a class="collapse-item" href="">CBT: Impor Data</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseYudisium">
+                            <i class="fas fa-fw fa-bullhorn"></i>
+                            <span>Yudisium</span>
+                        </a>
+                        <div id="collapseYudisium" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage Yudisium</h6>
+                                <a class="collapse-item" href="">Sesi Yudisium</a>
+                                <a class="collapse-item" href="">Peserta</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                            data-target="#collapseKonfigurasi">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Konfigurasi</span>
+                        </a>
+                        <div id="collapseKonfigurasi" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Configuration</h6>
+                                <a class="collapse-item" href="">Kode Akses CBT</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDataMaster">
+                            <i class="fas fa-fw fa-database"></i>
+                            <span>Data Master</span>
+                        </a>
+                        <div id="collapseDataMaster" class="collapse" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Manage Data Master</h6>
+                                <a class="collapse-item" href="">Data Sekolah</a>
+                                <a class="collapse-item" href="">Sifat Tiket</a>
+                                <a class="collapse-item" href="">Biaya Masuk</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="col-12">
+                    <hr class="sidebar-divider">
+                </div>
+                <div class="text-center d-none d-md-inline">
+                    <button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>
+                </div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown no-arrow" role="presentation">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
+                                        <span class="d-none d-lg-inline mr-2 text-gray-600 small">
+                                            Rintarou Okabe</span>
+                                        <img class="border rounded-circle img-profile" src="assets/img/avatar2.jpg">
+                                    </a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu">
+                                        <a class="dropdown-item" role="presentation" href="profile.html">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile
+                                        </a>
+                                        <a class="dropdown-item" role="presentation" href="ubah-password.html">
+                                            <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Ubah Password
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" role="presentation" href="index.html">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            &nbsp;Logout
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">Tahun Akademis</h3>
+                    </div>
+                    <!-- CONTENT -->
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Tahun Akademis</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-2 mb-3">
+                                            <a class="btn btn-add-admission" href="#">
+                                                <i class="fas fa-plus-circle fa-sm text-white-50"></i>&nbsp;Tambah
+                                            </a>
+                                        </div>
+                                        <!-- id="dataTable" -->
+                                        <table class="table table-bordered text-black cellspacing=" 0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nama</th>
+                                                    <th>Tahun</th>
+                                                    <th>Tanggal</th>
+                                                    <th>Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tahun Akademik 2014/2015</td>
+                                                    <td>2014</td>
+                                                    <td>1/9/2013 - 31/8/2014</td>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2015/2016</td>
+                                                    <td>2015</td>
+                                                    <td>1/9/2014 - 17/8/2015</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2016/2017</td>
+                                                    <td>2016</td>
+                                                    <td>18/8/2015 - 1/8/2016</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2014/2015</td>
+                                                    <td>2014</td>
+                                                    <td>1/9/2013 - 31/8/2014</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2015/2016</td>
+                                                    <td>2015</td>
+                                                    <td>1/9/2014 - 17/8/2015</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2016/2017</td>
+                                                    <td>2016</td>
+                                                    <td>18/8/2015 - 1/8/2016</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2017/2018</td>
+                                                    <td>2017</td>
+                                                    <td>31/8/2016 - 11/8/2017</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2018/2019</td>
+                                                    <td>2018</td>
+                                                    <td>7/9/2017 - 21/8/2018</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2019/2020</td>
+                                                    <td>2019</td>
+                                                    <td>3/9/2018 - 31/8/2019</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2020/2021</td>
+                                                    <td>2020</td>
+                                                    <td>2/9/2019 - 30/9/2020</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tahun Akademik 2021/2022</td>
+                                                    <td>2021</td>
+                                                    <td>1/8/2020 - 31/8/2021</td>
+                                                    <td>
+                                                        <div class="text-center">
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
+                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
+                                                                class="btn btn sm">
+                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © MCU 2020</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/js/chart.min.js"></script> -->
+    <!-- <script src="assets/js/bs-init.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/datatables/datatables-demo.js"></script>
+
+</body>
+
+</html>
