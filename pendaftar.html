@@ -100,7 +100,7 @@
                         <div id="collapseYudisium" class="collapse" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Manage Yudisium</h6>
-                                <a class="collapse-item" href="">Sesi Yudisium</a>
+                                <a class="collapse-item" href="yudisium.html">Sesi Yudisium</a>
                                 <a class="collapse-item" href="">Peserta</a>
                             </div>
                         </div>
@@ -191,7 +191,8 @@
 
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-2 mb-3">
                                             <a class="btn btn-add-admission" href="#">
-                                                <i class="fas fa-plus-circle fa-sm text-white-50"></i>&nbsp;Registrasi Baru
+                                                <i class="fas fa-plus-circle fa-sm text-white-50"></i>&nbsp;Registrasi
+                                                Baru
                                             </a>
                                         </div>
 
@@ -225,8 +226,9 @@
                                             </div>
                                         </div>
                                         <!-- id="dataTable" -->
-                                        <table id="dataTable" class="table table-bordered text-black font-small text-center">
-                                            <thead>
+                                        <table id="dataTableNoSorting"
+                                            class="table table-bordered text-black font-small table-striped">
+                                            <thead class="text-center">
                                                 <tr>
                                                     <th></th>
                                                     <th>
@@ -253,6 +255,7 @@
                                                             <select class="form-control font-small" id="filterWaktu">
                                                                 <option value="">Jalur Beasiswa</option>
                                                                 <option value="">Jalur Mitra Sekolah</option>
+                                                                <option value="">Jalur Reguler Rapor</option>
                                                             </select>
                                                         </div>
                                                     </th>
@@ -270,8 +273,9 @@
                                                         Status Tambahan
                                                         <div class="form-group m-0">
                                                             <select class="form-control font-small" id="filterWaktu">
-                                                                <option value="4">Tahun Akademik 2014/2015 (2014) - 8
-                                                                </option>
+                                                                <option value="">ALL_FINISHED</option>
+                                                                <option value="">NREG_PAID</option>
+                                                                <option value="">DU_UNCONFIRMED</option>
                                                             </select>
                                                         </div>
                                                     </th>
@@ -342,28 +346,67 @@
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        2020xxxxxx
+                                                        2019xxxxxx
                                                     </td>
                                                     <td>
-                                                        nate.river@email.com
+                                                        rintarou.okabe@email.com
                                                     </td>
                                                     <td>
-                                                        Nate River
+                                                        Rintarou Okabe
                                                     </td>
-                                                    <td>
-                                                        Jalur Beasiswa
+                                                    <td class="text-nowrap">
+                                                        Jalur Mitra Sekolah
                                                     </td>
                                                     <td>
                                                         0/0/0 <i class="fa fa-check"></i>
                                                     </td>
                                                     <td>
-                                                        CANCELLED
+                                                        POSTREG
                                                     </td>
                                                     <td>
-                                                        NREG_PAID
+                                                        ALL_FINISHED
                                                     </td>
                                                     <td>
-                                                        GAGAL
+                                                        BERHASIL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        2018xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        itaru.hashida@email.com
+                                                    </td>
+                                                    <td>
+                                                        Itaru Hashida
+                                                    </td>
+                                                    <td class="text-nowrap">
+                                                        Jalur Reguler Rapor
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        EXAMOK
+                                                    </td>
+                                                    <td>
+                                                        DU_UNCONFIRMED
+                                                    </td>
+                                                    <td>
+                                                        BERHASIL
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -403,6 +446,318 @@
                                                     </td>
                                                     <td>
                                                         GAGAL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        2019xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        rintarou.okabe@email.com
+                                                    </td>
+                                                    <td>
+                                                        Rintarou Okabe
+                                                    </td>
+                                                    <td>
+                                                        Jalur Mitra Sekolah
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        POSTREG
+                                                    </td>
+                                                    <td>
+                                                        ALL_FINISHED
+                                                    </td>
+                                                    <td>
+                                                        BERHASIL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        2018xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        itaru.hashida@email.com
+                                                    </td>
+                                                    <td>
+                                                        Itaru Hashida
+                                                    </td>
+                                                    <td>
+                                                        Jalur Reguler Rapor
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        EXAMOK
+                                                    </td>
+                                                    <td>
+                                                        DU_UNCONFIRMED
+                                                    </td>
+                                                    <td>
+                                                        BERHASIL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        2020xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        nate.river@email.com
+                                                    </td>
+                                                    <td>
+                                                        Nate River
+                                                    </td>
+                                                    <td>
+                                                        Jalur Beasiswa
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        CANCELLED
+                                                    </td>
+                                                    <td>
+                                                        NREG_PAID
+                                                    </td>
+                                                    <td>
+                                                        GAGAL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        2019xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        rintarou.okabe@email.com
+                                                    </td>
+                                                    <td>
+                                                        Rintarou Okabe
+                                                    </td>
+                                                    <td>
+                                                        Jalur Mitra Sekolah
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        POSTREG
+                                                    </td>
+                                                    <td>
+                                                        ALL_FINISHED
+                                                    </td>
+                                                    <td>
+                                                        BERHASIL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        2018xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        itaru.hashida@email.com
+                                                    </td>
+                                                    <td>
+                                                        Itaru Hashida
+                                                    </td>
+                                                    <td>
+                                                        Jalur Reguler Rapor
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        EXAMOK
+                                                    </td>
+                                                    <td>
+                                                        DU_UNCONFIRMED
+                                                    </td>
+                                                    <td>
+                                                        BERHASIL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        2020xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        nate.river@email.com
+                                                    </td>
+                                                    <td>
+                                                        Nate River
+                                                    </td>
+                                                    <td>
+                                                        Jalur Beasiswa
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        CANCELLED
+                                                    </td>
+                                                    <td>
+                                                        NREG_PAID
+                                                    </td>
+                                                    <td>
+                                                        GAGAL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        2019xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        rintarou.okabe@email.com
+                                                    </td>
+                                                    <td>
+                                                        Rintarou Okabe
+                                                    </td>
+                                                    <td>
+                                                        Jalur Mitra Sekolah
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        POSTREG
+                                                    </td>
+                                                    <td>
+                                                        ALL_FINISHED
+                                                    </td>
+                                                    <td>
+                                                        BERHASIL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-list"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-university"></i>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        2018xxxxxx
+                                                    </td>
+                                                    <td>
+                                                        itaru.hashida@email.com
+                                                    </td>
+                                                    <td>
+                                                        Itaru Hashida
+                                                    </td>
+                                                    <td>
+                                                        Jalur Reguler Rapor
+                                                    </td>
+                                                    <td>
+                                                        0/0/0 <i class="fa fa-check"></i>
+                                                    </td>
+                                                    <td>
+                                                        EXAMOK
+                                                    </td>
+                                                    <td>
+                                                        DU_UNCONFIRMED
+                                                    </td>
+                                                    <td>
+                                                        BERHASIL
                                                     </td>
                                                 </tr>
                                             </tbody>

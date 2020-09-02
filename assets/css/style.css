@@ -234,7 +234,7 @@ label {
 
 /* TAHUN AKADEMIS */
 
-.btn-aksi .fa {
+.btn-aksi .fa, .btn-aksi-danger .fa {
     color: #fff;
     /* font-size: 14px; */
 }
