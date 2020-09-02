@@ -239,16 +239,43 @@ label {
     /* font-size: 14px; */
 }
 
+/* BTN AKSI */
+
 .btn-aksi {
     background-color: #00a3e3;
     padding: 5px 10px;
     border-radius: 4px;
 }
 
+.btn-aksi:hover {
+    background-color: #0074b1;
+}
+
 .btn-aksi-danger {
     background-color: #dc3545;
     padding: 5px 10px;
     border-radius: 4px;
+}
+
+.btn-aksi-danger:hover {
+    background-color: #a3001e;
+}
+
+/* CARD HEADER */
+
+.card-header h6 {
+    color: #0067ac;
+}
+
+/* PAGE LEVEL */
+
+.page-link {
+    color: #0067ac;
+}
+
+.page-item.active .page-link {
+    background-color: #0067ac;
+    border-color: #0067ac;
 }
 
 @media (max-width: 444px) {
