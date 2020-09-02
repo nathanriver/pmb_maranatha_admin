@@ -92,15 +92,14 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link collapsed active" href="#" data-toggle="collapse"
-                            data-target="#collapseYudisium">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseYudisium">
                             <i class="fas fa-fw fa-bullhorn"></i>
                             <span>Yudisium</span>
                         </a>
                         <div id="collapseYudisium" class="collapse" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Manage Yudisium</h6>
-                                <a class="collapse-item active" href="yudisium.html">Sesi Yudisium</a>
+                                <a class="collapse-item" href="yudisium.html">Sesi Yudisium</a>
                                 <a class="collapse-item" href="">Peserta</a>
                             </div>
                         </div>
@@ -119,14 +118,15 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDataMaster">
+                        <a class="nav-link collapsed active" href="#" data-toggle="collapse"
+                            data-target="#collapseDataMaster">
                             <i class="fas fa-fw fa-database"></i>
                             <span>Data Master</span>
                         </a>
                         <div id="collapseDataMaster" class="collapse" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Manage Data Master</h6>
-                                <a class="collapse-item" href="data-sekolah.html">Data Sekolah</a>
+                                <a class="collapse-item active" href="data-sekolah.html">Data Sekolah</a>
                                 <a class="collapse-item" href="">Sifat Tiket</a>
                                 <a class="collapse-item" href="">Biaya Masuk</a>
                             </div>
@@ -176,7 +176,7 @@
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Sesi Yudisium</h3>
+                        <h3 class="text-dark mb-0">Data Sekolah</h3>
                     </div>
                     <!-- CONTENT -->
                     <div class="row">
@@ -184,7 +184,7 @@
 
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Yudisium</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Sekolah</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -195,60 +195,67 @@
                                             </a>
                                         </div>
 
-                                        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-                                            <div class="form-group">
-                                                <select class="form-control" id="filterWaktu">
-                                                    <option value="4">Tahun Akademik 2014/2015 (2014) - 8</option>
 
-                                                    <option value="1">Tahun Akademik 2015/2016 (2015) - 8</option>
-
-                                                    <option value="3">Tahun Akademik 2016/2017 (2016) - 8</option>
-
-                                                    <option value="5">Tahun Akademik 2017/2018 (2017) - 8</option>
-
-                                                    <option value="6">Tahun Akademik 2018/2019 (2018) - 1</option>
-
-                                                    <option value="7">Tahun Akademik 2019/2020 (2019) - 1</option>
-
-                                                    <option value="8" selected="selected">Tahun Akademik 2020/2021
-                                                        (2020) - 1</option>
-
-                                                    <option value="9">Tahun Akademik 2021/2022 (2021) - 1</option>
-                                                </select>
-                                            </div>
-                                        </div>
                                         <!-- id="dataTable" -->
                                         <table id="dataTableNoSorting"
-                                            class="table table-bordered text-black cellspacing=" 0">
+                                            class="table table-bordered text-black font-small table-striped">
                                             <thead class="text-center">
                                                 <tr>
-                                                    <th>Tanggal</th>
-                                                    <th>Periode</th>
-                                                    <th>Diproses Oleh</th>
-                                                    <th>Jumlah (P/B/G/C)</th>
-                                                    <th>Aksi</th>
+                                                    <th>
+                                                        Level / Tipe
+                                                        <div class="form-group m-0">
+                                                            <select class="form-control font-small" id="">
+                                                                <option value="">SMA</option>
+                                                                <option value="">SMK</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        NPSN
+                                                        <div class="form-group m-0">
+                                                            <input class="form-control font-small" type="text">
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        Provinsi
+                                                        <div class="form-group m-0">
+                                                            <select class="form-control font-small" id="">
+                                                                <option value="">JAWA BARAT</option>
+                                                                <option value="">JAWA TENGAH</option>
+                                                                <option value="">JAWA TIMUR</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        Kota
+                                                        <div class="form-group m-0">
+                                                            <select class="form-control font-small" id="">
+                                                                <option value="">KABUPATEN BANDUNG</option>
+                                                                <option value="">KOTA BANDUNG</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        Nama Sekolah
+                                                        <div class="form-group m-0">
+                                                            <input class="form-control font-small" type="text">
+                                                        </div>
+                                                    </th>
+                                                    <th class="align-middle">Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>2019-10-03 13:00:00</td>
-                                                    <td>2019-10</td>
-                                                    <td></td>
-                                                    <td>323/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
 
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -257,23 +264,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2019-10-03 13:00:00</td>
-                                                    <td>2019-10</td>
-                                                    <td></td>
-                                                    <td>323/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -282,23 +282,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2019-10-24 08:08:16</td>
-                                                    <td>2019-11</td>
-                                                    <td></td>
-                                                    <td>80/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -307,23 +300,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2019-11-01 10:32:00</td>
-                                                    <td>2019-11</td>
-                                                    <td></td>
-                                                    <td>74/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -332,23 +318,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2019-11-05 13:00:00</td>
-                                                    <td>2019-11</td>
-                                                    <td></td>
-                                                    <td>154/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -357,23 +336,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2019-11-15 09:00:00</td>
-                                                    <td>2019-11</td>
-                                                    <td></td>
-                                                    <td>27/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -382,23 +354,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2019-11-22 13:00:00</td>
-                                                    <td>2019-11</td>
-                                                    <td></td>
-                                                    <td>11/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -407,23 +372,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2019-12-03 13:00:00</td>
-                                                    <td>2019-12</td>
-                                                    <td></td>
-                                                    <td>142/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -432,23 +390,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2019-12-18 10:00:00</td>
-                                                    <td>2019-12</td>
-                                                    <td></td>
-                                                    <td>88/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -457,23 +408,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2020-01-09 13:23:17</td>
-                                                    <td>2020-1</td>
-                                                    <td></td>
-                                                    <td>21/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
@@ -482,23 +426,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2020-01-17 13:12:44</td>
-                                                    <td>2020-1</td>
-                                                    <td></td>
-                                                    <td>25/0/0/0</td>
+                                                    <td>SMA</td>
+                                                    <td>2021xxxx</td>
+                                                    <td>JAWA BARAT</td>
+                                                    <td>KOTA BANDUNG</td>
+                                                    <td>SMAN XYZ Bandung</td>
+
                                                     <td>
                                                         <div class="text-center text-nowrap">
                                                             <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-database"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-users"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi font-small">
-                                                                <i class="fa fas fa-clone"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
-                                                                <i class="fa fas fa-cogs"></i>
+                                                                <i class="fa fas fa-pencil-alt"></i>
                                                             </a>
                                                             <a href="" class="btn btn-xs btn-aksi-danger font-small">
                                                                 <i class="fa fas fa-trash"></i>
