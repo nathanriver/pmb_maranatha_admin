@@ -34,8 +34,7 @@
                         <hr class="sidebar-divider">
                     </div>
                     <li class="nav-item dropdown" role="presentation">
-                        <a class="nav-link collapsed active" href="" data-toggle="collapse"
-                            data-target="#collapseAkademis">
+                        <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseAkademis">
                             <i class="fas fa-fw fa-graduation-cap"></i>
                             <span>Akademis</span>
                         </a>
@@ -43,7 +42,7 @@
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Manage Akademis</h6>
                                 <a class="collapse-item" href="">Dashboard</a>
-                                <a class="collapse-item active" href="tahun-akademis.html">Tahun Akademis</a>
+                                <a class="collapse-item" href="tahun-akademis.html">Tahun Akademis</a>
                                 <a class="collapse-item" href="">Quota Penerimaan</a>
                                 <a class="collapse-item" href="periode-pendaftaran.html">Data Periode / Jalur</a>
                                 <a class="collapse-item" href="">Biaya Masuk</a>
@@ -106,7 +105,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                        <a class="nav-link collapsed active" href="#" data-toggle="collapse"
                             data-target="#collapseKonfigurasi">
                             <i class="fas fa-fw fa-cog"></i>
                             <span>Konfigurasi</span>
@@ -114,7 +113,7 @@
                         <div id="collapseKonfigurasi" class="collapse" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Configuration</h6>
-                                <a class="collapse-item" href="kode-akses-cbt.html">Kode Akses CBT</a>
+                                <a class="collapse-item active" href="kode-akses-cbt.html">Kode Akses CBT</a>
                             </div>
                         </div>
                     </li>
@@ -176,7 +175,7 @@
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Tahun Akademis</h3>
+                        <h3 class="text-dark mb-0">Kode Akses CBT</h3>
                     </div>
                     <!-- CONTENT -->
                     <div class="row">
@@ -184,264 +183,290 @@
 
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Tahun Akademis</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Daftar Kode Akses CBT</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
+
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-2 mb-3">
                                             <a class="btn btn-add-admission" href="#">
                                                 <i class="fas fa-plus-circle fa-sm text-white-50"></i>&nbsp;Tambah
                                             </a>
                                         </div>
+
+
                                         <!-- id="dataTable" -->
-                                        <table id="dataTable" class="table table-bordered text-black cellspacing=" 0">
+                                        <table id="dataTableNoSorting"
+                                            class="table table-bordered text-black font-small table-striped">
                                             <thead class="text-center">
                                                 <tr>
-                                                    <th>Nama</th>
-                                                    <th>Tahun</th>
-                                                    <th>Tanggal</th>
-                                                    <th>Aksi</th>
+                                                    <th>
+                                                        Kode
+                                                        <div class="form-group m-0">
+                                                            <input class="form-control font-small" type="text">
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        Nama
+                                                        <div class="form-group m-0">
+                                                            <input class="form-control font-small" type="text">
+                                                        </div>
+                                                    </th>
+                                                    <th class="align-middle">
+                                                        Awal
+                                                    </th>
+                                                    <th class="align-middle">
+                                                        Akhir
+                                                    </th>
+                                                    <th>
+                                                        Jalur
+                                                        <div class="form-group m-0">
+                                                            <select class="form-control font-small" id="">
+                                                                <option value="">INTERNAL</option>
+                                                                <option value="">EKSTERNAL</option>
+                                                            </select>
+                                                        </div>
+                                                    </th>
+                                                    <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>Tahun Akademik 2014/2015</td>
-                                                    <td>2014</td>
-                                                    <td>1/9/2013 - 31/8/2014</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
                                                         <div class="text-center text-nowrap">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2015/2016</td>
-                                                    <td>2015</td>
-                                                    <td>1/9/2014 - 17/8/2015</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2016/2017</td>
-                                                    <td>2016</td>
-                                                    <td>18/8/2015 - 1/8/2016</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2014/2015</td>
-                                                    <td>2014</td>
-                                                    <td>1/9/2013 - 31/8/2014</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2015/2016</td>
-                                                    <td>2015</td>
-                                                    <td>1/9/2014 - 17/8/2015</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2016/2017</td>
-                                                    <td>2016</td>
-                                                    <td>18/8/2015 - 1/8/2016</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2017/2018</td>
-                                                    <td>2017</td>
-                                                    <td>31/8/2016 - 11/8/2017</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2018/2019</td>
-                                                    <td>2018</td>
-                                                    <td>7/9/2017 - 21/8/2018</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2019/2020</td>
-                                                    <td>2019</td>
-                                                    <td>3/9/2018 - 31/8/2019</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2020/2021</td>
-                                                    <td>2020</td>
-                                                    <td>2/9/2019 - 30/9/2020</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
-                                                            </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tahun Akademik 2021/2022</td>
-                                                    <td>2021</td>
-                                                    <td>1/8/2020 - 31/8/2021</td>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
                                                     <td>
-                                                        <div class="text-center">
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-calendar-alt"></i>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-list"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi" class="btn btn sm">
-                                                                <i class="fa fas fa-pencil-alt"></i>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-xs btn-aksi-danger btn-danger"
-                                                                class="btn btn sm">
-                                                                <i class="fa fas fa-trash-alt"></i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3YSGxx</td>
+                                                    <td>16 Maret</td>
+                                                    <td>2020-03-16 12:00:00</td>
+                                                    <td>2020-03-16 14:00:00</td>
+                                                    <td>EKSTERNAL</td>
+                                                    <td>
+                                                        <div class="text-center text-nowrap">
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-times"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi font-small">
+                                                                <i class="fa fas fa-stopwatch"></i>
+                                                            </a>
+                                                            <a href="" class="btn btn-xs btn-aksi-danger font-small">
+                                                                <i class="fa fas fa-trash"></i>
                                                             </a>
                                                         </div>
                                                     </td>
