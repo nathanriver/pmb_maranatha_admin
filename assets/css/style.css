@@ -278,6 +278,11 @@ label {
     border-color: #0067ac;
 }
 
+/* NAVBAR ACTIVE LINK */
+.sidebar .nav-item .collapse .collapse-inner .collapse-item.active{
+    color: #0067ac;
+}
+
 @media (max-width: 444px) {
     .nav-tabs {
         display: -webkit-box;
