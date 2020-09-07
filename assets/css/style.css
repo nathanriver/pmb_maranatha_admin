@@ -75,6 +75,7 @@
 
 .navbar-bg {
     background-color: #0067ac;
+    background: linear-gradient(180deg, #0067ac 0%, #00a3e3 100%);
 }
 
 .btn-add-admission {
@@ -210,7 +211,7 @@ label {
 /* DASHBOARD ADMIN */
 
 .table-height-over {
-    max-height: 400px;
+    max-height: 600px;
 }
 
 .fa-check {
@@ -273,14 +274,47 @@ label {
     color: #0067ac;
 }
 
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    font-size: 14px;
+}
+
 .page-item.active .page-link {
     background-color: #0067ac;
     border-color: #0067ac;
 }
 
 /* NAVBAR ACTIVE LINK */
-.sidebar .nav-item .collapse .collapse-inner .collapse-item.active{
+
+.sidebar .nav-item .collapse .collapse-inner .collapse-item.active {
     color: #0067ac;
+}
+
+/* TABLE HOVER */
+
+.table-hover tbody tr:hover {
+    color: #000;
+    background-color: rgba(0, 103, 172, .1);
+}
+
+/* FONT 13 */
+
+.font-size-13 {
+    font-size: 13px;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+/* FORM CONTROL FOCUS */
+
+.form-control:focus {
+    background-color: #fff;
+    border: 2px solid #00a3e3;
+    border-radius: 4px;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(78,115,223,.25); */
+    box-shadow: none;
 }
 
 @media (max-width: 444px) {
