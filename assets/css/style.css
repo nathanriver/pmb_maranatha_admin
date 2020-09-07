@@ -80,11 +80,12 @@
 
 .btn-add-admission {
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 13px;
     background-color: #0067ac;
     border-color: #0067ac;
     width: 100%;
     color: #fff;
+    font-weight: 700;
 }
 
 .btn-add-admission:hover {
@@ -120,6 +121,8 @@ label {
 }
 
 .btn-bg-blue {
+    font-size: 13px;
+    font-weight: 700;
     color: #fff;
     background-color: #0067ac;
     border-color: #0067ac;
@@ -294,6 +297,25 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .table-hover tbody tr:hover {
     color: #000;
     background-color: rgba(0, 103, 172, .1);
+}
+
+/* HR HEADLINE */
+
+.headline {
+    font-weight: 700;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.headline:before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    bottom: 0;
+    left: 35%;
+    border-bottom: 3px solid #0067ac;
 }
 
 /* FONT 13 */
